@@ -1,0 +1,99 @@
+/* Estilos do formulário */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.botao {
+    margin-top: 10px; 
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 20px;
+  }
+  
+  /* Estilo para os links na navbar */
+  .navbar a {
+    color: #333; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    padding: 10px 10px; /* Espaçamento interno */
+    text-decoration: none; /* Remover sublinhado */
+    transition: color 0.3s; /* Transição suave de cor */
+  }
+  
+  /* Estilo para os links na navbar ao passar o mouse */
+  .navbar a:hover {
+    color: #1f75d2; /* Mudança de cor ao passar o mouse */
+  }
+
+  .negativo {
+    text-align: center;
+  }
+
+.numeros-apostados-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; 
+}
+
+.numeros-apostados-list li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.numeros-apostados-list li:before {
+    content: "\2022";
+    color: #007bff; /* Cor do marcador */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

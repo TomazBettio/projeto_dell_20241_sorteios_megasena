@@ -1,0 +1,41 @@
+{% extends "base/base.html" %}
+{% block conteudo %}
+<body>
+    <div class="container">
+        <h1>Lista de apostas</h1>
+        {% if apostas %} 
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Aposta</th>
+                <th>Nome do apostador</th>
+                <th>Cpf do apostador</th>
+                <th>Numero 1</th>
+                <th>Numero 2</th>
+                <th>Numero 3</th>
+                <th>Numero 4</th>
+                <th>Numero 5</th>
+            </tr>
+            {% for aposta in apostas %}
+            <tr>
+                <td>{{aposta.id_aposta}}</td>
+                <td>{{aposta.nome}}</td>
+                <td>{{aposta.cpf}}</td>
+                <td>{{aposta.numero_1}}</td>
+                <td>{{aposta.numero_2}}</td>
+                <td>{{aposta.numero_3}}</td>
+                <td>{{aposta.numero_4}}</td>
+                <td>{{aposta.numero_5}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        <form action="{% url 'sorteio' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Finalizar e iniciar sorteio</button>
+        </form>
+        {% else %}
+        <p class="negativo">Não há apostas cadastradas!</p>
+        {% endif %}
+        
+    </div>
+{% endblock %}

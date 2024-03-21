@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block conteudo %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<form id="formulario" action="{% url 'nova_aposta' %}" onsubmit="return submitApostas()" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <h1>Preencha o seu cartão de aposta (de 1 a 50)</h1>
+        <label for="nome">Nome:</label>
+        <input id="nome" placeholder="Nome completo" name="nome" type="text" required>
+        <label for="cpf">CPF:</label>
+        <input id="cpfInput" placeholder="___.___.___-__" name="cpf" type="text" required>
+        <div id="inputs_apostas">
+        </div>
+        <button type="button" onclick="gerarInputs()" id="gerarBtn" class="botao">Aposta manual</button>
+        <button type="button" onclick="funcaoBotao2()" id="geraSurp" class="botao">Aposta "surpresinha"</button>
+        <button type="submit" class="botao" id="salvarBtn" onclick="submitApostas" style="display: none;">Salvar</button>
+
+
+    </div>
+    <script src= "{% static 'js/home.js' %}"></script>
+</form>
+</body>
+</html>
+
+{% endblock %}
+   

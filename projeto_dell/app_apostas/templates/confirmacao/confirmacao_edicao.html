@@ -1,0 +1,8 @@
+{% extends "base/base.html" %}
+{% block conteudo %}
+<body>
+    <div class="container">
+        <h1>Uma nova edicao foi inciada.</h1>
+        <button onclick="window.location.href = '{% url 'home' %}'">Voltar</button>
+    </div>
+{% endblock %}
